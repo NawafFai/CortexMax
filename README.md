@@ -197,8 +197,9 @@ just dev   # starts the relay and the desktop app together
 ```
 
 **Release installers** are built by GitHub Actions
-(`.github/workflows/release.yml`): push a tag such as `v0.6.0` and the workflow
-builds the macOS `.dmg` and the Windows `.exe` and attaches them to a Release.
+(`.github/workflows/release.yml`): push a tag such as `v0.6.0`, or run the
+**Release** workflow from the Actions tab with a version, and it builds the
+macOS `.dmg` and the Windows `.exe` and attaches them to a Release.
 
 ---
 
