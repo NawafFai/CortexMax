@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!--
+    Cortex Max's mark: a friendly clock.
+
+    The clock reading lives in the bezel's twelve ticks rather than in hands
+    across the face. Hands drawn over the features collide with the eyes at
+    every size — the first cut of this icon put the minute hand straight
+    through them — and a face that has to dodge its own hands ends up reading
+    as neither a clock nor a character.
+
+    Everything is geometry, not type, so it renders identically everywhere. The
+    heavy outline, the cream bezel and the wide silhouette carry the small end:
+    by 32px the pupils and cheeks have closed up, and those three are all that
+    is left to recognise.
+  -->
+  <defs>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F9933A"/>
+      <stop offset="1" stop-color="#EE7411"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="#2B1B10"/>
+
+  <!-- Cream bezel. -->
+  <circle cx="512" cy="512" r="360" fill="#FFF1D6"/>
+
+  <!-- Twelve ticks; the four cardinals are longer, as on a real dial. -->
+  <g fill="#3A1F0B">
+    <rect x="502" y="158" width="20" height="54" rx="10"/>
+    <rect x="504" y="165" width="16" height="40" rx="8" transform="rotate(30 512 512)"/>
+    <rect x="504" y="165" width="16" height="40" rx="8" transform="rotate(60 512 512)"/>
+    <rect x="502" y="158" width="20" height="54" rx="10" transform="rotate(90 512 512)"/>
+    <rect x="504" y="165" width="16" height="40" rx="8" transform="rotate(120 512 512)"/>
+    <rect x="504" y="165" width="16" height="40" rx="8" transform="rotate(150 512 512)"/>
+    <rect x="502" y="158" width="20" height="54" rx="10" transform="rotate(180 512 512)"/>
+    <rect x="504" y="165" width="16" height="40" rx="8" transform="rotate(210 512 512)"/>
+    <rect x="504" y="165" width="16" height="40" rx="8" transform="rotate(240 512 512)"/>
+    <rect x="502" y="158" width="20" height="54" rx="10" transform="rotate(270 512 512)"/>
+    <rect x="504" y="165" width="16" height="40" rx="8" transform="rotate(300 512 512)"/>
+    <rect x="504" y="165" width="16" height="40" rx="8" transform="rotate(330 512 512)"/>
+  </g>
+
+  <!-- The face. -->
+  <circle cx="512" cy="512" r="280" fill="url(#face)" stroke="#3A1F0B" stroke-width="30"/>
+
+  <!-- Cheeks sit behind the mouth so the smile overlaps them. -->
+  <circle cx="380" cy="590" r="54" fill="#E2651F"/>
+  <circle cx="644" cy="590" r="54" fill="#E2651F"/>
+
+  <!-- Eyes. -->
+  <ellipse cx="425" cy="445" rx="72" ry="84" fill="#FFFDF5" stroke="#3A1F0B" stroke-width="26"/>
+  <ellipse cx="599" cy="445" rx="72" ry="84" fill="#FFFDF5" stroke="#3A1F0B" stroke-width="26"/>
+  <circle cx="437" cy="458" r="33" fill="#3A1F0B"/>
+  <circle cx="587" cy="458" r="33" fill="#3A1F0B"/>
+  <circle cx="450" cy="439" r="12" fill="#FFFDF5"/>
+  <circle cx="600" cy="439" r="12" fill="#FFFDF5"/>
+
+  <!-- Nose, sitting clear of both the eyes above and the mouth below. -->
+  <ellipse cx="512" cy="560" rx="26" ry="19" fill="#C25410"/>
+
+  <!-- Open smile. -->
+  <path d="M 410 612 A 110 104 0 0 0 614 612" fill="#7A2E10" stroke="#3A1F0B" stroke-width="26" stroke-linejoin="round"/>
+</svg>

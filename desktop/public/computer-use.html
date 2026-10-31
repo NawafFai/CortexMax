@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cortex Max</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: transparent;
+        color: #fff;
+        font: 13px -apple-system, "SF Arabic", "Geeza Pro", system-ui, sans-serif;
+        overflow: hidden;
+        cursor: default;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      #bar {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 2px 4px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 44px;
+        padding: 0 14px 0 6px;
+        border-radius: 22px;
+        background: rgba(160, 18, 18, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-sizing: border-box;
+      }
+      .row.looking {
+        background: rgba(150, 90, 10, 0.95);
+      }
+      .dot {
+        flex: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ff6b6b;
+        box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.35);
+      }
+      .looking .dot {
+        background: #ffc861;
+        box-shadow: 0 0 0 3px rgba(255, 200, 97, 0.35);
+      }
+      .text {
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .name {
+        font-weight: 700;
+      }
+      .detail {
+        opacity: 0.85;
+      }
+      button {
+        flex: none;
+        border: 0;
+        border-radius: 16px;
+        padding: 6px 16px;
+        background: #fff;
+        color: #9b1111;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.7;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bar" role="alert" aria-live="assertive"></div>
+    <script src="computer-use.js"></script>
+  </body>
+</html>

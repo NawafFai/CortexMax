@@ -1,0 +1,13 @@
+Cortex Max
+Copyright 2026 The Cortex Max authors
+
+This product is derived from Buzz (https://github.com/block/buzz),
+Copyright Block, Inc., licensed under the Apache License, Version 2.0.
+The upstream snapshot this fork starts from is commit
+4ab4f786085a23fe6126529861840eff6048ceee (Buzz 0.5.23).
+
+Modifications relative to upstream include the channel-scoped projects and
+reliable agent execution features (see docs/channel-projects.md) and the
+Cortex Max product identity (name, bundle identifier, icon, data directories).
+The full source is distributed under the same Apache License, Version 2.0;
+see LICENSE.

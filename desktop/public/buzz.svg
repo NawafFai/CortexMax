@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Cortex Max">
+  <!--
+    The same clock as the app icon, at half the scale. Kept in step with
+    src-tauri/icons/cortex-max-source.svg: if one changes so must the other, or
+    the favicon stops matching the thing sitting in the Dock.
+  -->
+  <rect width="512" height="512" rx="96" fill="#2B1B10"/>
+
+  <circle cx="256" cy="256" r="180" fill="#FFF1D6"/>
+
+  <g fill="#3A1F0B">
+    <rect x="251" y="79" width="10" height="27" rx="5"/>
+    <rect x="252" y="82" width="8" height="20" rx="4" transform="rotate(30 256 256)"/>
+    <rect x="252" y="82" width="8" height="20" rx="4" transform="rotate(60 256 256)"/>
+    <rect x="251" y="79" width="10" height="27" rx="5" transform="rotate(90 256 256)"/>
+    <rect x="252" y="82" width="8" height="20" rx="4" transform="rotate(120 256 256)"/>
+    <rect x="252" y="82" width="8" height="20" rx="4" transform="rotate(150 256 256)"/>
+    <rect x="251" y="79" width="10" height="27" rx="5" transform="rotate(180 256 256)"/>
+    <rect x="252" y="82" width="8" height="20" rx="4" transform="rotate(210 256 256)"/>
+    <rect x="252" y="82" width="8" height="20" rx="4" transform="rotate(240 256 256)"/>
+    <rect x="251" y="79" width="10" height="27" rx="5" transform="rotate(270 256 256)"/>
+    <rect x="252" y="82" width="8" height="20" rx="4" transform="rotate(300 256 256)"/>
+    <rect x="252" y="82" width="8" height="20" rx="4" transform="rotate(330 256 256)"/>
+  </g>
+
+  <circle cx="256" cy="256" r="140" fill="#F58220" stroke="#3A1F0B" stroke-width="15"/>
+
+  <circle cx="190" cy="295" r="27" fill="#E2651F"/>
+  <circle cx="322" cy="295" r="27" fill="#E2651F"/>
+
+  <ellipse cx="212" cy="222" rx="36" ry="42" fill="#FFFDF5" stroke="#3A1F0B" stroke-width="13"/>
+  <ellipse cx="300" cy="222" rx="36" ry="42" fill="#FFFDF5" stroke="#3A1F0B" stroke-width="13"/>
+  <circle cx="218" cy="229" r="17" fill="#3A1F0B"/>
+  <circle cx="294" cy="229" r="17" fill="#3A1F0B"/>
+  <circle cx="225" cy="219" r="6" fill="#FFFDF5"/>
+  <circle cx="300" cy="219" r="6" fill="#FFFDF5"/>
+
+  <ellipse cx="256" cy="280" rx="13" ry="10" fill="#C25410"/>
+
+  <path d="M 205 306 A 55 52 0 0 0 307 306" fill="#7A2E10" stroke="#3A1F0B" stroke-width="13" stroke-linejoin="round"/>
+</svg>
