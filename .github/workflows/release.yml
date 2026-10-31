@@ -114,6 +114,12 @@ jobs:
           fi
           ./scripts/bundle-sidecars.sh "$TARGET"
 
+      # A restored cache can carry an installer from an earlier version; clear
+      # the bundle output so only this build's installer can be found below.
+      - name: Clear old installers
+        shell: bash
+        run: rm -rf "desktop/src-tauri/target/${TARGET}/release/bundle"
+
       - name: Build installer
         shell: bash
         run: cd desktop && pnpm tauri build --target "$TARGET" --bundles "${{ matrix.bundle }}" --config src-tauri/tauri.release.conf.json
@@ -127,11 +133,12 @@ jobs:
         run: |
           set -euo pipefail
           DIR="desktop/src-tauri/target/${TARGET}/release/bundle/${{ matrix.bundle }}"
-          FILE=$(find "$DIR" -maxdepth 1 -name '${{ matrix.pattern }}' -type f | head -1)
-          if [[ -z "$FILE" ]]; then
-            echo "::error::No installer found in $DIR"
+          mapfile -t FILES < <(find "$DIR" -maxdepth 1 -name '${{ matrix.pattern }}' -type f)
+          if [[ ${#FILES[@]} -ne 1 ]]; then
+            echo "::error::Expected exactly one installer in $DIR, found ${#FILES[@]}: ${FILES[*]}"
             exit 1
           fi
+          FILE="${FILES[0]}"
           echo "file=$FILE" >> "$GITHUB_OUTPUT"
 
       - name: Upload installer
