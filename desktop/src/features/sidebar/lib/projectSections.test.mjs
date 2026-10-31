@@ -10,15 +10,15 @@ function channel(id, name, extra = {}) {
 const CHANNELS = [
   channel("w1", "product-launch"),
   channel("m1", "product-launch-management"),
-  channel("w2", "demo-app"),
-  channel("m2", "demo-app-management"),
+  channel("w2", "web-app"),
+  channel("m2", "web-app-management"),
   channel("g", "general"),
 ];
 
 test("a project is a live work channel and its management room", () => {
   assert.deepEqual(findProjectPairs(CHANNELS), [
     { name: "product-launch", workId: "w1", managementId: "m1" },
-    { name: "demo-app", workId: "w2", managementId: "m2" },
+    { name: "web-app", workId: "w2", managementId: "m2" },
   ]);
 });
 
@@ -44,7 +44,7 @@ test("an unarranged project gets a folder named after it with both rooms", () =>
   );
   assert.deepEqual(plan.create, [
     { name: "product-launch", channelIds: ["w1", "m1"] },
-    { name: "demo-app", channelIds: ["w2", "m2"] },
+    { name: "web-app", channelIds: ["w2", "m2"] },
   ]);
   assert.deepEqual(plan.assign, []);
   assert.deepEqual(plan.settled, [], "settled only once the folder is seen");
