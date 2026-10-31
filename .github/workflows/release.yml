@@ -179,4 +179,6 @@ jobs:
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
             --title "Cortex Max $TAG" \
-            --notes "Unsigned builds for macOS (Apple Silicon) and Windows (x64). See the README for first-launch steps."
+            --notes "Unsigned builds for macOS (Apple Silicon) and Windows (x64). See the README for first-launch steps.
+
+          Cortex Max is built on [Buzz](https://github.com/block/buzz) by Block, Inc. (Apache-2.0). It is an independent project, not affiliated with Block."
