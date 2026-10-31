@@ -10,6 +10,10 @@
 </p>
 
 <p align="center">
+  <strong>Built on <a href="https://github.com/block/buzz">Buzz</a> by Block, Inc.</strong>
+</p>
+
+<p align="center">
   <img src="desktop/src-tauri/icons/128x128@2x.png" alt="The Cortex Max icon: a friendly clock face" width="112">
 </p>
 
@@ -202,6 +206,23 @@ just dev   # starts the relay and the desktop app together
 macOS `.dmg` and the Windows `.exe` and attaches them to a Release.
 
 ---
+
+## Built on Buzz
+
+Cortex Max is a fork of **[Buzz](https://github.com/block/buzz)**, the open-source
+workspace for people and AI agents made by **Block, Inc.** and released under the
+Apache License 2.0. The relay, the desktop app, the agent harness, the CLI and
+most of what you see in the app are Buzz's work. This project starts from Buzz
+0.5.23 (upstream commit
+[`4ab4f78`](https://github.com/block/buzz/commit/4ab4f786085a23fe6126529861840eff6048ceee))
+and adds the features described above.
+
+Credit for Buzz belongs to its authors at Block and its contributors. Cortex Max
+is an independent project: it is not affiliated with, endorsed by, or supported
+by Block. If you want the original, use [Buzz](https://github.com/block/buzz).
+
+Block's copyright notices are kept in the source as the license requires; see
+[NOTICE](NOTICE) and [LICENSE](LICENSE).
 
 ## License
 

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { getVersion } from "@tauri-apps/api/app";
+import { openUrl } from "@tauri-apps/plugin-opener";
 import { AlertCircle, ArrowLeft, LoaderCircle, RefreshCw } from "lucide-react";
 
 import { useMyRelayMembershipLookupQuery } from "@/features/community-members/hooks";
@@ -319,6 +320,16 @@ export function SettingsView({
               v{appVersion}
             </p>
           ) : null}
+          <button
+            className="px-2 pb-1 text-left text-xs text-sidebar-foreground/45 hover:text-sidebar-foreground/70 hover:underline"
+            data-buzz-sidebar-secondary
+            data-testid="settings-upstream-credit"
+            onClick={() => void openUrl("https://github.com/block/buzz")}
+            title="Cortex Max is built on Buzz by Block, Inc. (Apache-2.0)"
+            type="button"
+          >
+            Built on Buzz by Block
+          </button>
         </SidebarFooter>
       </Sidebar>
 

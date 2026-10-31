@@ -7,7 +7,13 @@ The upstream snapshot this fork starts from is commit
 4ab4f786085a23fe6126529861840eff6048ceee (Buzz 0.5.23).
 
 Modifications relative to upstream include the channel-scoped projects and
-reliable agent execution features (see docs/channel-projects.md) and the
-Cortex Max product identity (name, bundle identifier, icon, data directories).
+reliable agent execution features (see docs/channel-projects.md), plan-limit
+and usage controls, team coordination features, the CORTEX COMMAND team
+template, and the Cortex Max product identity (name, bundle identifier, icon,
+data directories).
+
+Cortex Max is an independent project and is not affiliated with, endorsed by,
+or supported by Block, Inc. "Buzz" is used here only to identify the upstream
+project this work is derived from.
 The full source is distributed under the same Apache License, Version 2.0;
 see LICENSE.
