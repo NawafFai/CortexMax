@@ -133,12 +133,14 @@ jobs:
         run: |
           set -euo pipefail
           DIR="desktop/src-tauri/target/${TARGET}/release/bundle/${{ matrix.bundle }}"
-          mapfile -t FILES < <(find "$DIR" -maxdepth 1 -name '${{ matrix.pattern }}' -type f)
-          if [[ ${#FILES[@]} -ne 1 ]]; then
-            echo "::error::Expected exactly one installer in $DIR, found ${#FILES[@]}: ${FILES[*]}"
+          # Portable to macOS's bash 3.2 (no mapfile).
+          FOUND=$(find "$DIR" -maxdepth 1 -name '${{ matrix.pattern }}' -type f)
+          COUNT=$(printf '%s\n' "$FOUND" | grep -c . || true)
+          if [[ "$COUNT" -ne 1 ]]; then
+            echo "::error::Expected exactly one installer in $DIR, found $COUNT: $FOUND"
             exit 1
           fi
-          FILE="${FILES[0]}"
+          FILE="$FOUND"
           echo "file=$FILE" >> "$GITHUB_OUTPUT"
 
       - name: Upload installer
